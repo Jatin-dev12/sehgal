@@ -15,8 +15,16 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          jatin sehgal
         </a>
+        <section>
+        <h1>My First Component</h1>
+        <ol>
+        <li>Defining a Component</li>
+        <li>Components: UI Building Blocks</li>
+        <li>Using a Component</li>
+        </ol>
+        </section>
       </header>
     </div>
   );
