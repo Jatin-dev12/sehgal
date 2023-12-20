@@ -25,6 +25,9 @@ function App() {
         <li>Using a Component</li>
         </ol>
         </section>
+        <section>
+        import img from './jj.jpg';
+        </section>
       </header>
     </div>
   );
