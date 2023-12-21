@@ -4,18 +4,17 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
-import pic from '../12.png'
+import pic from '../componets/images/IAW-black-logo.png'
 
 function Header() {
   return (
     
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="xl">
     <Container className="justify-content-center">
     <Navbar.Brand href="#home">
             <img
               src={pic}             
-              width="50"
-              height="50"
+              width="110px"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
@@ -32,8 +31,8 @@ function Header() {
               
           
       </Navbar.Collapse>
-      <Col xs="auto">
-            <Button type="submit"> 📞 9915841204</Button>
+      <Col xl="auto">
+             <Button type="submit" size="lg"> 📞 9915841204</Button>
           </Col>
     </Container>
   </Navbar>
