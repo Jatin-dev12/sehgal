@@ -1,20 +1,24 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Carousel } from 'react-bootstrap';
-// import Col from 'react-bootstrap/Col';
-// import Container from 'react-bootstrap/Container';
-// import Image from 'react-bootstrap/Image';
-// import Row from 'react-bootstrap/Row';
-import Image from './images/com.png';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+import photo from './images/com.png';
 import jatin from './images//Blockchain.png';
 import sehgal from './images/ai.png';
+import jj from './images/1-min.png';
+import js from './images/3-min.png';
+import sj from './images/4-min.png';
+import jsj from './images/logo192.png';
 function  Sonimam() {
   return (
     <>
     <Carousel pause="hoverfalse">
       <Carousel.Item interval={800}>
       <img
-              src={Image}                 
+              src={photo}                 
               alt='slider pic'
 
             />
@@ -60,19 +64,22 @@ communication, we became an award-winning organization.
       </Carousel.Item>
     </Carousel>
   
-    {/* <Container>
+    <Container className='logos'>
     <Row>
-      <Col xs={6} md={4}>
-        <Image src={} rounded />
+      <Col>
+        <Image src={jj} alt='this 1sf' rounded />
       </Col>
-      <Col xs={6} md={4}>
-        <Image src="holder.js/171x180" rounded />
+      <Col>
+        <Image src={js} alt='insthis' rounded />
       </Col>
-      <Col xs={6} md={4}>
-        <Image src="holder.js/171x180" rounded />
+      <Col>
+        <img src={sj}  alt='is i right' rounded />
+      </Col>
+      <Col>
+        <Image src={jsj} alt='fijd' rounded />
       </Col>
     </Row>
-  </Container> */}
+  </Container>
 
   </>
   );
