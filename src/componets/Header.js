@@ -4,7 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
-import pic from '../componets/images/IAW-black-logo.png'
+import pic from '../componets/images/IAW-black-logo.png';
+
 
 function Header() {
   return (

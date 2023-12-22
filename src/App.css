@@ -3,5 +3,40 @@
 }
 
 .navbar{
-    margin: 10 10 ;
+    margin: 10;
+    text-transform: uppercase;
+    font-weight: 500;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.joker{
+    margin-right: 555px;
+    font-weight: 900;
+    font-size: xx-large;
+    align-items: center;
+    text-align: left;
+    color: black;
+    line-height: 1.5;
+}
+p{
+    font-size: larger;
+    font-weight:400;
+    text-align: left;
+    color: black;
+    margin-right: 350px;
+
+}
+.carousel-caption {
+    top: 10rem;
+}
+.carousel-control-prev{
+    display: none;
+    visibility: hidden;
+}
+
+.lets{
+      float:left;
+      height: 50px;
+      margin-top: 10px;
+
 }

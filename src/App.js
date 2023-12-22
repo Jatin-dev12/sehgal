@@ -1,8 +1,9 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
 import Header from './componets/Header';
 import Sonimam from './componets/sonimam';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {  
@@ -10,8 +11,8 @@ function App() {
     <div className="App">
       <Header />
       <Sonimam />
-  
     </div>
+    
   );
 }
 
