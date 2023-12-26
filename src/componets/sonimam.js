@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+// import OwlCarousel from 'react-owl-carousel';
 import photo from './images/com.png';
 import jatin from './images//Blockchain.png';
 import sehgal from './images/ai.png';
@@ -14,11 +15,11 @@ import sj from './images/4-min.png';
 import jsj from './images/logo192.png';
 import web from './images/nn.jpg';
 import rr from './images/rr.jpg';
-import html from './images/html.png';
-import css from './images/css.png';
-import php from './images/php.png';
-import react from './images/react.png';
-import seo from './images/seo.png';
+// import html from './images/html.png';
+// import css from './images/css.png';
+// import php from './images/php.png';
+// import react from './images/react.png';
+// import seo from './images/seo.png';
 function Sonimam() {
   return (
     <>
@@ -127,23 +128,28 @@ Our approach is designed to provide you with a systematic and organized process.
       </Container>
 
       <h1 className='jn'> We're Familiar With </h1>
-      <Carousel  className='slide'>
-      <Carousel.Item interval={500}>
-        <Image src={html} />
-             </Carousel.Item>
-             <Carousel.Item interval={500}>
-        <Image src={css} />
-             </Carousel.Item>
-             <Carousel.Item interval={500}>
-        <Image src={php} />
-             </Carousel.Item>
-             <Carousel.Item interval={500}>
-        <Image src={seo} />
-             </Carousel.Item>
-             <Carousel.Item interval={500}>
-        <Image src={react} />
-             </Carousel.Item>
-             </Carousel>
+      {/* <OwlCarousel className='owl-theme' loop margin={10} nav>
+    <div class='item'>
+        Image src={html} 
+    </div>
+    <div class='item'>
+    Image src={css} 
+    </div>
+    <div class='item'>
+        Image src={php} 
+    </div>
+    <div class='item'>
+    Image src={react} 
+    </div>
+    <div class='item'>
+    Image src={react} 
+    </div>
+    <div class='item'>
+    Image src={seo} 
+    </div>
+
+    </OwlCarousel> */}
+             
 
     </>
   );
