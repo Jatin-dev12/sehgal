@@ -16,7 +16,7 @@ function  Sonimam() {
   return (
     <>
     <Carousel pause="hoverfalse">
-      <Carousel.Item interval={800}>
+      <Carousel.Item interval={1000}>
       <img
               src={photo}                 
               alt='slider pic'
@@ -30,7 +30,7 @@ expertise to go beyond the other traditional technology..</p>
 <Button variant="primary" className='lets'><b>LET'S GET STARTED</b></Button>{' '}
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={800}>
+      <Carousel.Item interval={1000}>
       <img
               src={jatin}            
               alt='slider pic'
@@ -46,7 +46,7 @@ media landscape in the area. .</p>
 <Button variant="primary" className='lets'><b>LET'S GET STARTED</b></Button>{' '}
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={800}>
+      <Carousel.Item interval={1000}>
       <img
               src={sehgal}        
               alt='slider pic'
@@ -64,22 +64,19 @@ communication, we became an award-winning organization.
       </Carousel.Item>
     </Carousel>
   
-    <Container className='logos'>
-    <Row>
-      <Col>
-        <Image src={jj} alt='this 1sf' rounded />
-      </Col>
-      <Col>
-        <Image src={js} alt='insthis' rounded />
-      </Col>
-      <Col>
-        <img src={sj}  alt='is i right' rounded />
-      </Col>
-      <Col>
-        <Image src={jsj} alt='fijd' rounded />
-      </Col>
-    </Row>
-  </Container>
+  <Container>
+      <Row md={4}>
+        <Col> <Image src={jsj} alt='fijd'/><p className='text'>LIVE SUPPORT</p></Col>
+        <Col xs={6}><img src={sj}  alt='is i right' /><p className='text'>CLIENT SATISFACTION</p></Col>
+        <Col><Image src={js} alt='insthis' /><p className='text'>IMMENSE VALUE</p></Col>
+        <Col><Image src={jj}  alt='this 1sf'/><p className='text'>CERTIFIED TEAM</p></Col>
+      </Row>
+    </Container>
+
+   <section>
+    <h1 align="center">Approach With a Purpose</h1>
+    <p par>Our result’s driven and one of a kind Web development, Web-Graphic  Designing and CRM software development, Digital marketing  solutions are just as unique as your business and its needs. We work on your vision like it’s our own. We as a company have achieved such invaluable insights and shared such precious experiences in this passage of time. With digital marketing and Web development solutions being the core of this organization and a mutual passion for all of us, we have always worked to give our clients nothing but the best. In our quest for outstanding work and more importantly,  work ‘ethics’, we’ve made and maintained some flawless long term professional relations with our clients and we’re proud of that.essional relations with our clients and we’re proud of that.</p>
+   </section>
 
   </>
   );
