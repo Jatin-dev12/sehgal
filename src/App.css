@@ -18,7 +18,7 @@
     color: black;
     line-height: 1.5;
 }
-p{
+.hehe{
     font-size: larger;
     font-weight:400;
     text-align: left;
@@ -41,11 +41,43 @@ p{
     }
 
 .text{
-    text-align: center;
-    justify-content: center;
-    padding-left: 10px;
+     text-align: left;
 }
 .row-cols-md-4>* {
     
-    padding: 50px;
+    padding: 51px;
+}
+.ho{
+    font-weight: 700;
+    text-align: center;
+    top: 20px;
+}
+.par{
+    font-weight: 500;
+    margin: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+}
+.text-center{
+    padding-bottom: 50px;
+}
+.ooo{
+    text-align: center;
+    font-weight: 500;
+}
+.hhh{
+    padding-top: 60px;
+
+}
+.iii{
+    width: 100%;
+}
+.g{
+    padding-bottom: 10px;
+}
+.jn{
+    font-weight: 500;
+    text-align: center;
+    padding-top: 55px;
 }
