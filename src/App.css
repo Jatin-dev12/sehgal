@@ -89,5 +89,39 @@
     text-align: center;
 }
 .do{
-   margin-top: 100px;
+   margin-top: 190px;
+}
+.nini{
+    text-align: center;
+    font-weight:600;
+    padding-top: 80px;
+    
+}
+.sleep{
+    text-align: center;
+    font-weight: 400;
+    padding: 10px;
+}
+.roo{
+ text-align: center;
+}
+.realme{
+    justify-content: right;
+    margin-left: 75px;
+    padding: 5px;
+    padding-bottom: 10px;
+
+}
+.our{
+    font-weight: 500;
+    text-align: center;
+}
+.show{
+
+ float: left;
+ bottom: 50px;
+ margin-left: 45%;
+ margin-bottom: 20px;
+    
+
 }

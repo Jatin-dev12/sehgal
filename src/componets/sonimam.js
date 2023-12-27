@@ -21,6 +21,9 @@ import iii from './images/iii.png';
 import io from './images/io.png'
 import iio from './images/iio.png'
 import iiio from './images/iiio.png'
+import sir from './images/sir.png'
+import bhu from './images/bhu.png'
+import soni from './images/soni.png'
 // import html from './images/html.png';
 // import css from './images/css.png';
 // import php from './images/php.png';
@@ -150,7 +153,11 @@ Our approach is designed to provide you with a systematic and organized process.
         <Row md> 
           
 
-          <Col xl className='do'>IAW Technologies is an inventive web and mobile app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services</Col>
+          <Col xl className='do'>IAW Technologies is an inventive web and mobile 
+          app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your 
+          turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services
+
+          </Col>
           
           <Col xs> 
           <Carousel>
@@ -167,7 +174,7 @@ Our approach is designed to provide you with a systematic and organized process.
             
           <Carousel.Item interval={1000}>
           <img
-            src={iio}
+            src={iiio}
             alt='slider pic' />
 
          
@@ -178,7 +185,35 @@ Our approach is designed to provide you with a systematic and organized process.
           </Col>
         </Row>
       </Container>
+           <Container>
+            <h1 className='nini'>Our Core Minds</h1>
+            <p className='sleep'>Our team is known for its excellence, creativity, pioneering solutions and bringing thoughts into reality. Our mission is to bring plans and technology together to develop business on the web. We have been working for more than 12 years and serve small as well as large enterprises with our IT services and named ourselves IosAndWeb Technologies which is meant for innovation. Eventually, our main aim is to give your business a smart and exceptional online presence in the digital world which will bring a high Return On Investment.
 
+            </p>
+            <Row >
+               <Col xs={6} md={4}>
+                  <Image className='realme' src={sir} roundedCircle /><h5 className='roo'>UTKARSH KHARE</h5><p className='our'> Founder & CEO</p>
+
+              </Col>
+             
+              <Col xs={6} md={4}>
+                  <Image className='realme' src={bhu} roundedCircle /><h5 className='roo'>BHUPINDER SINGH PALIWAL</h5><p className='our'>
+Software Development Manager</p>
+              </Col>
+
+              <Col xs={6} md={4}>
+                  <Image className='realme'   src={soni}  roundedCircle /><h5 className='roo'>SONI SAINI</h5>
+
+<p className='our'>Senior Software Developer</p>
+              </Col>
+              
+            </Row>
+            <Button className='show' variant="primary" size="lg">
+          Show More
+        </Button>
+
+           </Container>
+           
     </>
   );
 }
