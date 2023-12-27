@@ -1,13 +1,13 @@
-import React from "react";
-import Spinner from 'react-bootstrap/Spinner';
+import React from 'react'
+import Header from './Header'
 
 function services() {
   return (
-
-    <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
-  );
+    <div>
+      <Header/>
+      <h1>jatin sehgal</h1>
+    </div>
+  )
 }
 
 export default services;

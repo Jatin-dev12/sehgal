@@ -1,41 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
-import services from './componets/services';
-import router, { Routes,route  } from "react-router-dom";
-import Header from './componets/Header';
+import Services from './componets/services'
 import Sonimam from './componets/sonimam';
-import { BrowserRouter } from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
+import Portfolio from './componets/Portfolio'
+import About from './componets/About '
+import Layout from './Layout';
 
- function App() {  
+function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/services">services</Link>
-            </li>
-            </ul>
-        </nav>
-        <Switch>
-          <Route path="/services">
-            <About />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  ); 
-
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Sonimam/>} />
+          <Route path="services" element={<Services />} />
+          <Route path="Portfolio" element={<Portfolio/>} />
+          <Route path="About" element={<About />} />
+          {/* <Route path="contact" element={<Contact />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

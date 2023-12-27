@@ -15,6 +15,7 @@ import sj from './images/4-min.png';
 import jsj from './images/logo192.png';
 import web from './images/nn.jpg';
 import rr from './images/rr.jpg';
+import Header from './Header';
 // import html from './images/html.png';
 // import css from './images/css.png';
 // import php from './images/php.png';
@@ -23,6 +24,7 @@ import rr from './images/rr.jpg';
 function Sonimam() {
   return (
     <>
+    <Header/>
       <Carousel pause="hoverfalse">
         <Carousel.Item interval={1000}>
           <img

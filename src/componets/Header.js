@@ -23,10 +23,14 @@ function Header() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
         <Nav className="justify-content-center">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Services</Nav.Link>
-          <Nav.Link href="#home">Portfolio</Nav.Link>
-          <Nav.Link href="#link">About Us</Nav.Link>
+  
+
+
+
+         <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/services">Services</Nav.Link>
+          <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+          <Nav.Link href="/About">About Us</Nav.Link>
           <Nav.Link href="#link">Contact Us</Nav.Link>
               </Nav>
               
