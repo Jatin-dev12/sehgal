@@ -24,6 +24,9 @@ import iiio from './images/iiio.png'
 import sir from './images/sir.png'
 import bhu from './images/bhu.png'
 import soni from './images/soni.png'
+import ggl from './images/ggl.png'
+import trst from './images/trst.png'
+import top from './images/top.png'
 // import html from './images/html.png';
 // import css from './images/css.png';
 // import php from './images/php.png';
@@ -156,7 +159,21 @@ Our approach is designed to provide you with a systematic and organized process.
           <Col xl className='do'>IAW Technologies is an inventive web and mobile 
           app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your 
           turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services
-
+          <Row className='pp'> <Col xs={6} md={4}>
+          <Image src={ggl}  />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src={trst}  />
+        </Col>
+        <Col xs={6} md={4}>
+          <Image src={top}  />
+        </Col></Row>
+          
+        
+           {/* <Col> <Image src={ggl} alt='vbfd'/>
+           <Image src={trst} alt='vbfd'/>
+           <Image src={top} alt='vbfd'/>
+           </Col> */}
           </Col>
           
           <Col xs> 
@@ -209,7 +226,7 @@ Software Development Manager</p>
               
             </Row>
             <Button className='show' variant="primary" size="lg">
-          Show More
+        Show More
         </Button>
 
            </Container>
