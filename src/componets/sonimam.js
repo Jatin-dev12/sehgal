@@ -150,7 +150,7 @@ Our approach is designed to provide you with a systematic and organized process.
         <Row md> 
           
 
-          <Col xl >IAW Technologies is an inventive web and mobile app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services</Col>
+          <Col xl className='do'>IAW Technologies is an inventive web and mobile app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services</Col>
           
           <Col xs> 
           <Carousel>
@@ -173,9 +173,7 @@ Our approach is designed to provide you with a systematic and organized process.
          
         </Carousel.Item>
         </Carousel>
-          
-          
-          
+        
           
           </Col>
         </Row>
