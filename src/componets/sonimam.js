@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-// import OwlCarousel from 'react-owl-carousel';
 import photo from './images/com.png';
 import jatin from './images//Blockchain.png';
 import sehgal from './images/ai.png';
@@ -16,6 +15,12 @@ import jsj from './images/logo192.png';
 import web from './images/nn.jpg';
 import rr from './images/rr.jpg';
 import Header from './Header';
+import i from './images/i.png';
+import ii from './images/ii.png';
+import iii from './images/iii.png';
+import io from './images/io.png'
+import iio from './images/iio.png'
+import iiio from './images/iiio.png'
 // import html from './images/html.png';
 // import css from './images/css.png';
 // import php from './images/php.png';
@@ -129,29 +134,52 @@ Our approach is designed to provide you with a systematic and organized process.
         </Row>
       </Container>
 
-      <h1 className='jn'> We're Familiar With </h1>
-      {/* <OwlCarousel className='owl-theme' loop margin={10} nav>
-    <div class='item'>
-        Image src={html} 
-    </div>
-    <div class='item'>
-    Image src={css} 
-    </div>
-    <div class='item'>
-        Image src={php} 
-    </div>
-    <div class='item'>
-    Image src={react} 
-    </div>
-    <div class='item'>
-    Image src={react} 
-    </div>
-    <div class='item'>
-    Image src={seo} 
-    </div>
+      <h1 className='jn'> OUR WORK </h1>
+      <Container>
+      <Row>
+        <Col xs className='work'>  <Image src={i} alt='web dev' /></Col>
+        <Col xs className='work'> <Image src={ii} alt='web dev' /></Col>
+        <Col xs className='work'> <Image  src={iii} alt='web dev' /></Col>
+      </Row>
+    </Container>
 
-    </OwlCarousel> */}
-             
+    <h1 className='jn'><b>What our clients say?</b>  </h1>
+    <h4 align="center">Don't take our Word, Hear it from our Clients</h4>
+    <p className='sa'>The success of our clients makes up for our own and we can't emphasize this enough!</p>
+    <Container md >
+        <Row md> 
+          
+
+          <Col xl >IAW Technologies is an inventive web and mobile app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services</Col>
+          
+          <Col xs> 
+          <Carousel>
+          <Carousel.Item interval={1000}>
+          <img
+            src={io}
+            alt='slider pic' />
+            </Carousel.Item>
+          <Carousel.Item interval={1000}>
+          <img
+            src={iio}
+            alt='slider pic' />
+            </Carousel.Item>
+            
+          <Carousel.Item interval={1000}>
+          <img
+            src={iio}
+            alt='slider pic' />
+
+         
+        </Carousel.Item>
+        </Carousel>
+          
+          
+          
+          
+          </Col>
+        </Row>
+      </Container>
 
     </>
   );
