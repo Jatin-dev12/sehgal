@@ -160,13 +160,13 @@ Our approach is designed to provide you with a systematic and organized process.
           app development and digital marketing agency. We partner with small, medium and large scale domestic and international customers.You can witness examples of our web development and digital marketing achievements for yourself! Now it is your 
           turn, we’d love to learn more about you and your business! But first, see what our clients have to say for our team and our services
           <Row className='pp'> <Col xs={6} md={4}>
-          <Image src={ggl}  />
+          <Image  className='icons' src={ggl}  />
         </Col>
         <Col xs={6} md={4}>
-          <Image src={trst}  />
+          <Image  className='icons' src={trst}  />
         </Col>
         <Col xs={6} md={4}>
-          <Image src={top}  />
+          <Image className='icons' src={top}  />
         </Col></Row>
           
         
