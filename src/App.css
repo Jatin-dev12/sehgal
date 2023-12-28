@@ -147,12 +147,11 @@
 .foot{
 
     padding: 50px;
-
-
+    
 }
 svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     padding: 10px;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: center ;
 }
