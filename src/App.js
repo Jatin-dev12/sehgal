@@ -10,8 +10,13 @@ import Layout from './Layout';
 
 function App() {
   return (
+    
+
     <BrowserRouter>
+
       <Routes>
+
+        
         <Route path="/" element={<Layout />}>
           <Route index element={<Sonimam/>} />
           <Route path="services" element={<Services />} />
@@ -19,8 +24,10 @@ function App() {
           <Route path="About" element={<About />} />
           {/* <Route path="contact" element={<Contact />} /> */}
         </Route>
+      
       </Routes>
     </BrowserRouter>
+
   );
 }
 

@@ -14,7 +14,7 @@ import sj from './images/4-min.png';
 import jsj from './images/logo192.png';
 import web from './images/nn.jpg';
 import rr from './images/rr.jpg';
-import Header from './Header';
+// import Header from './Header';
 import i from './images/i.png';
 import ii from './images/ii.png';
 import iii from './images/iii.png';
@@ -35,7 +35,7 @@ import top from './images/top.png'
 function Sonimam() {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
       <Carousel pause="hoverfalse">
         <Carousel.Item interval={1000}>
           <img
@@ -230,7 +230,9 @@ Software Development Manager</p>
         </Button>
 
            </Container>
+
            
+
     </>
   );
 }

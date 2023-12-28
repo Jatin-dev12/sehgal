@@ -130,3 +130,23 @@
     vertical-align: middle;
     width: 100%;
 }
+.footer{
+    margin: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    align-content: center;
+    font-weight: 800;
+
+}
+
+.navbar-expand .navbar-nav{
+    text-align: center;
+    font-weight: 700;
+    
+} 
+.foot{
+
+    padding: 50px;
+
+
+}
