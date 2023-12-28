@@ -5,6 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import pic from '../componets/images/IAW-black-logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone} from '@fortawesome/free-brands-svg-icons'
+
 
 
 function Header() {
@@ -20,8 +23,8 @@ function Header() {
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
         <Nav className="justify-content-center">
   
 
@@ -37,7 +40,7 @@ function Header() {
           
       </Navbar.Collapse>
       <Col xl="auto">
-             <Button type="submit" size="lg"> 📞 9915841204</Button>
+             <Button type="submit" size="lg"> <FontAwesomeIcon icon={faPone} /> 9915841204</Button>
           </Col>
     </Container>
   </Navbar>

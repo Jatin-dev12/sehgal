@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import lst from './images/f.png'
 import photo from './images/IAW-black-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter , faFacebook , faInstagram , faLinkedinIn ,faWhatsapp } from '@fortawesome/free-brands-svg-icons'
@@ -11,7 +12,13 @@ import { faTwitter , faFacebook , faInstagram , faLinkedinIn ,faWhatsapp } from 
 
 function footer() {
   return (
+    
+
     <div className='foot'>
+      <div className='boring'>
+    < img src={lst} alt='fsf'></img>
+  </div>
+  
 
        <Navbar className='footer'>
     <Container >
@@ -32,12 +39,12 @@ function footer() {
       </Navbar.Collapse>
     </Container>
   </ Navbar> 
-  
+
   <Container>
       <Row>
         <Col md-2>
             <h1> About us</h1>
-            <p>IosAndWeb Technologies believes in achieving goals and client satisfaction. We deliver inspiring & eye-catching websites and conduct profitable marketing campaigns that attract the audience and boost the client’s business. We provide Support & Maintenance even after the completion of the project.</p>
+            <p className='go'>IosAndWeb Technologies believes in achieving goals and client satisfaction. We deliver inspiring & eye-catching websites and conduct profitable marketing campaigns that attract the audience and boost the client’s business. We provide Support & Maintenance even after the completion of the project.</p>
         
         
         
@@ -63,6 +70,7 @@ Let’s connect: 01762-515680  +91-99158-41204
       </Row>
 
   </Container>
+  <p className='last'>© 2023 All Rights Reserved | IosAndWeb Technologies. Design by jatin sehgal</p>
 
 
 

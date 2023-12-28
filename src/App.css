@@ -4,11 +4,11 @@
 
 .navbar{
     margin: 10;
-    text-transform: uppercase;
+   text-transform: uppercase;
     font-weight: 500;
     justify-content: space-between;
     align-content: space-between;
-}
+} 
 .joker{
     margin-right: 555px;
     font-weight: 900;
@@ -121,7 +121,8 @@
  float: left;
  bottom: 50px;
  margin-left: 45%;
- margin-bottom: 20px;
+ margin-top: 20px;
+ margin-bottom: 40px;
    
 
 }
@@ -144,11 +145,6 @@
     font-weight: 700;
     
 } 
-.foot{
-
-    padding: 50px;
-
-}
 svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     padding: 10px;
     text-align: center;
@@ -160,9 +156,41 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     padding-right: 35px;
 }
 .dabba img{
+    display: block;
     width: 85%;
     justify-content: right;
 }
 .aws{
+    text-align: left;
+    margin-top: 20px;
+}
+.last{
+    padding-top: 60px;
+    font-size: smaller;
     text-align: center;
+    justify-content: center;
+    top: 50px;
+}
+.boring{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+.go{
+text-align: justify;
+}
+@media(max-width: 375px){
+
+    Navbar.Toggle{
+
+        text-align: end;
+    }
+
+    .par{ margin: auto;
+        padding: 0;
+
+    }
 }
