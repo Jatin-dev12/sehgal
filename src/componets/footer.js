@@ -3,9 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
-
-
+import Col from 'react-bootstrap/Col';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter , faFacebook , faInstagram , faLinkedinIn ,faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 
 function footer() {
@@ -34,24 +34,21 @@ function footer() {
   
   <Container>
       <Row>
-        <Col>
+        <Col md-2>
             <h1> About us</h1>
             <p>IosAndWeb Technologies believes in achieving goals and client satisfaction. We deliver inspiring & eye-catching websites and conduct profitable marketing campaigns that attract the audience and boost the client’s business. We provide Support & Maintenance even after the completion of the project.</p>
         
         
         
         </Col>
-        <Col>
-           <p>
-            
-Facebook-square
-Twitter
-Instagram
-Linkedin
-Whatsapp
-If you would like to connect with us, do not hesitate,
+        <Col xs>
+          <FontAwesomeIcon icon={faFacebook} size='2x' />
+          <FontAwesomeIcon icon={faTwitter} size='2x'/> 
+          <FontAwesomeIcon icon={faInstagram} size='2x'/>
+          <FontAwesomeIcon icon={faLinkedinIn} size='2x' />
+          <FontAwesomeIcon icon={faWhatsapp} size='2x' />
 
-We’d love for you to get in touch! See you there.
+           <p> If you would like to connect with us, do not hesitate, We’d love for you to get in touch! See you there.
 
 Let’s connect: 01762-515680  +91-99158-41204
            </p>
