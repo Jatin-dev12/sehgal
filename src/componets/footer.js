@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import photo from './images/IAW-black-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter , faFacebook , faInstagram , faLinkedinIn ,faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
@@ -41,7 +42,10 @@ function footer() {
         
         
         </Col>
-        <Col xs>
+        <Col className='dabba'>
+          < img src={photo} alt="fvsdff"/>
+        </Col>
+        <Col xs  className='aws'>
           <FontAwesomeIcon icon={faFacebook} size='2x' />
           <FontAwesomeIcon icon={faTwitter} size='2x'/> 
           <FontAwesomeIcon icon={faInstagram} size='2x'/>

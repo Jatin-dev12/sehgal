@@ -147,11 +147,22 @@
 .foot{
 
     padding: 50px;
-    
+
 }
 svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     padding: 10px;
     text-align: center;
     align-items: center;
     justify-content: center ;
+}
+.dabba{
+    padding-left: 20px;
+    padding-right: 35px;
+}
+.dabba img{
+    width: 85%;
+    justify-content: right;
+}
+.aws{
+    text-align: center;
 }
