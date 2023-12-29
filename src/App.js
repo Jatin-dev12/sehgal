@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
 import Services from './componets/services'
-import Sonimam from './componets/sonimam';
+import Home from './componets/Home';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import Portfolio from './componets/Portfolio'
 import About from './componets/About '
@@ -18,7 +18,7 @@ function App() {
 
         
         <Route path="/" element={<Layout />}>
-          <Route index element={<Sonimam/>} />
+          <Route index element={<Home/>} />
           <Route path="services" element={<Services />} />
           <Route path="Portfolio" element={<Portfolio/>} />
           <Route path="About" element={<About />} />

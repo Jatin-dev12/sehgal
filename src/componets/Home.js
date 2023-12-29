@@ -23,18 +23,20 @@ import iio from './images/iio.png'
 import iiio from './images/iiio.png'
 import sir from './images/sir.png'
 import bhu from './images/bhu.png'
-import cf from './images/cf.jpg'
 import soni from './images/soni.png'
 import ggl from './images/ggl.png'
 import trst from './images/trst.png'
 import top from './images/top.png'
-import Form from 'react-bootstrap/Form';
+
 // import html from './images/html.png';
 // import css from './images/css.png';
 // import php from './images/php.png';
 // import react from './images/react.png';
 // import seo from './images/seo.png';
 function Sonimam() {
+
+          
+
   return (
     <>
     {/* <Header/> */}
@@ -231,39 +233,7 @@ Our approach is designed to provide you with a systematic and organized process.
                </Row>
          
 
-           </Container>
-
-    <Container>
-        <Row>
-           <Col xs> <img className='cff' src={cf} alt='df' ></img></Col>
-        
-              <Col xs> 
-                <Form className='cf'>
-                 <Row>
-                    <Col className='ccc'>
-                    <Form.Label>Firt Name</Form.Label>
-                       <Form.Control/>
-                   </Col>
-                        <Col>
-                        <Form.Label>Last Name</Form.Label>
-                        <Form.Control />
-                       </Col>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Number</Form.Label>
-                        <Form.Control type="number" />
-              <Form.Label>Email</Form.Label>
-          <Form.Control type="email" />
-          </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Massage</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-              </Row>
-              <Button type="submit">Submit form</Button>
-              </Form>
-              </Col>
-              </Row>
-              </Container>
+           </Container>      
            
 
     </>

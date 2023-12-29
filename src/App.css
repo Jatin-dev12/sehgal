@@ -185,7 +185,7 @@ text-align: justify;
 .carousel-indicators{
     display: none;
 }
-@media(max-width: 375px){
+@media(max-width: 786px){
 
     Navbar.Toggle{
 
@@ -195,6 +195,8 @@ text-align: justify;
     .par{ 
         margin: 20px;
         padding: 0;
+        padding-left: 0px;
+        padding-right: 0px;
 
     }
     .container {
@@ -236,6 +238,15 @@ text-align: justify;
     .show{
         margin-left: 30%;
     }
+    .d{
+        display: contents;
+    }
+    .ccc{
+        display: contents;
+    }
+   .d{
+    display: contents;
+   }
 
 
 }
@@ -243,6 +254,7 @@ text-align: justify;
     font-weight: 500;
     margin: 50px;
     padding-top: 20px;
+    
 }
 .cff{
     width: 100%;
