@@ -1,5 +1,6 @@
 *{
     margin: auto;
+    padding: auto;
 }
 
 .navbar{
@@ -117,13 +118,12 @@
     text-align: center;
 }
 .show{
-
- float: left;
+ width: auto;
+ margin-left: 520px;
  bottom: 50px;
- margin-left: 45%;
  margin-top: 20px;
  margin-bottom: 40px;
-   
+
 
 }
 .icons {
@@ -182,6 +182,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 .go{
 text-align: justify;
 }
+.carousel-indicators{
+    display: none;
+}
 @media(max-width: 375px){
 
     Navbar.Toggle{
@@ -189,8 +192,58 @@ text-align: justify;
         text-align: end;
     }
 
-    .par{ margin: auto;
+    .par{ 
+        margin: 20px;
         padding: 0;
 
     }
+    .container {
+        padding: 20px;
+    }
+    .row.row-cols-md-true {
+        display: block;
+    }
+    .sa{
+        padding: 10px;
+    }
+    .re{
+        padding: 10px;
+    }
+    .do{
+        margin: auto;
+        text-align: center;
+    }
+    .pp.row{
+        display: block;
+    }
+    .row-cols-md-4>* {
+    
+        padding: 1px;
+    }
+    .work{
+        display: flex;
+    }
+    .joker{
+        margin-right: auto;
+    }
+    img.realme.rounded-circle{
+        width: 100%;
+        margin: auto;
+    }
+    .col-6 {
+        width: 60%;
+    }
+    .show{
+        margin-left: 30%;
+    }
+
+
+}
+.cf{
+    font-weight: 500;
+    margin: 50px;
+    padding-top: 20px;
+}
+.cff{
+    width: 100%;
 }
