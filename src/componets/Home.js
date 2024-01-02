@@ -14,7 +14,6 @@ import sj from './images/4-min.png';
 import jsj from './images/logo192.png';
 import web from './images/nn.jpg';
 import rr from './images/rr.jpg';
-// import Header from './Header';
 import i from './images/i.png';
 import ii from './images/ii.png';
 import iii from './images/iii.png';
@@ -27,7 +26,6 @@ import soni from './images/soni.png'
 import ggl from './images/ggl.png'
 import trst from './images/trst.png'
 import top from './images/top.png'
-
 // import html from './images/html.png';
 // import css from './images/css.png';
 // import php from './images/php.png';
@@ -39,11 +37,12 @@ function Sonimam() {
 
   return (
     <>
-    {/* <Header/> */}
-      <Carousel pause="hoverfalse">
+
+       <Carousel pause="hoverfalse">
         <Carousel.Item interval={1000}>
           <img
             src={photo}
+            
             alt='slider pic'
 
           />
@@ -58,6 +57,7 @@ function Sonimam() {
         <Carousel.Item interval={1000}>
           <img
             src={jatin}
+           
             alt='slider pic'
 
           />
@@ -74,6 +74,7 @@ function Sonimam() {
         <Carousel.Item interval={1000}>
           <img
             src={sehgal}
+            
             alt='slider pic'
 
           />

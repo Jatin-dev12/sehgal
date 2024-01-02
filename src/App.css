@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-content: space-between;
 } 
+
 .joker{
     margin-right: 555px;
     font-weight: 900;
@@ -18,6 +19,7 @@
     text-align: left;
     color: black;
     line-height: 1.5;
+
 }
 .hehe{
     font-size: larger;
@@ -29,10 +31,15 @@
 }
 .carousel-caption {
     top: 10rem;
+    
 }
 .carousel-control-prev{
     display: none;
     visibility: hidden;
+    
+}
+.d.row{
+    width: 100%;
 }
 
 .lets{
@@ -83,7 +90,7 @@
     padding-top: 55px;
 }
 .work{
-    padding-top: 50px;
+
     padding-bottom: 30px;
 }
 .sa{
@@ -173,14 +180,8 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 }
 .boring{
     text-align: center;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
     width: 100%;
-}
-.go{
-text-align: justify;
+    display: flex;
 }
 .carousel-indicators{
     display: none;
@@ -191,6 +192,9 @@ text-align: justify;
 
         text-align: end;
     }
+    .sa{
+        font-weight: 500;
+    }
 
     .par{ 
         margin: 20px;
@@ -198,6 +202,22 @@ text-align: justify;
         padding-left: 0px;
         padding-right: 0px;
 
+    }
+    .work.col img {
+        width: 100%;
+    }
+    .carousel {
+        position: relative;
+        display: none;
+    }
+    img.iii {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .mb-3 {
+        display: flex;
+        flex-direction: column;
     }
     .container {
         padding: 20px;
@@ -211,16 +231,25 @@ text-align: justify;
     .re{
         padding: 10px;
     }
+    .navbar-expand .navbar-nav{
+        display: block;
+    }
+
+
     .do{
         margin: auto;
         text-align: center;
+        font-weight: 500;
     }
     .pp.row{
-        display: block;
+        display: flex;
     }
     .row-cols-md-4>* {
     
         padding: 1px;
+    }
+    .boring img {
+        width: 100%;
     }
     .work{
         display: flex;
@@ -233,7 +262,10 @@ text-align: justify;
         margin: auto;
     }
     .col-6 {
-        width: 60%;
+        width: 100%;
+    }
+    .text{
+        text-align: center;
     }
     .show{
         margin-left: 30%;
@@ -246,6 +278,18 @@ text-align: justify;
     }
    .d{
     display: contents;
+   }
+
+   .form{
+    display:contents;
+   }
+   button.btn.btn-primary.btn-lg {
+    display: none;
+   }
+
+   .row{
+    flex-direction: column;
+    text-align: center;
    }
 
 
