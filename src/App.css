@@ -2,7 +2,9 @@
     margin: auto;
     padding: auto;
 }
-
+a.navbar-brand {
+    margin-left: 0;
+}
 .navbar{
     margin: 10;
    text-transform: uppercase;
@@ -49,11 +51,17 @@
     }
 
 .text{
-     text-align: left;
+     text-align: center;
 }
 .row-cols-md-4>* {
     
     padding: 51px;
+}
+
+.row.row-cols-md-4 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
 .ho{
     font-weight: 700;
@@ -164,7 +172,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 }
 .dabba img{
     display: block;
-    width: 85%;
+    width: 100%;
     justify-content: right;
 }
 .aws{
@@ -188,12 +196,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 }
 @media(max-width: 786px){
 
-    Navbar.Toggle{
-
-        text-align: end;
-    }
-    .sa{
+       .sa{
         font-weight: 500;
+    }
+    .button.btn.btn-primary.btn-lg{
+        display: none;
     }
 
     .par{ 
@@ -206,10 +213,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     .work.col img {
         width: 100%;
     }
-    .carousel {
+    /* .carousel {
         position: relative;
         display: none;
-    }
+    } */
     img.iii {
         width: 100%;
         display: flex;
@@ -230,9 +237,6 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     }
     .re{
         padding: 10px;
-    }
-    .navbar-expand .navbar-nav{
-        display: block;
     }
 
 
@@ -302,4 +306,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 }
 .cff{
     width: 100%;
+}
+.row{
+    width: 100%;
+}
+.sssss{
+    text-align: center;
 }

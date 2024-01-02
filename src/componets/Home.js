@@ -181,7 +181,7 @@ Our approach is designed to provide you with a systematic and organized process.
            </Col> */}
           </Col>
           
-          <Col xs> 
+          <Col xs className='sssss'> 
           <Carousel>
           <Carousel.Item interval={1000}>
           <img
