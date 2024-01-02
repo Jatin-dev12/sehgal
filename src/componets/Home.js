@@ -31,7 +31,7 @@ import top from './images/top.png'
 // import php from './images/php.png';
 // import react from './images/react.png';
 // import seo from './images/seo.png';
-function Sonimam() {
+function Home() {
 
           
 
@@ -240,4 +240,4 @@ Our approach is designed to provide you with a systematic and organized process.
     </>
   );
 }
-export default Sonimam;
+export default Home ;
