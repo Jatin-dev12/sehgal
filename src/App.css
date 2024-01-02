@@ -16,7 +16,7 @@ a.navbar-brand {
 .joker{
     margin-right: 555px;
     font-weight: 900;
-    font-size: xx-large;
+    font-size: xx-large;    
     align-items: center;
     text-align: left;
     color: black;
@@ -213,10 +213,10 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     .work.col img {
         width: 100%;
     }
-    /* .carousel {
+    .carousel {
         position: relative;
         display: none;
-    } */
+    }
     img.iii {
         width: 100%;
         display: flex;
@@ -265,9 +265,11 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         width: 100%;
         margin: auto;
     }
-    .col-6 {
-        width: 100%;
+    .navbar-expand .navbar-nav{
+        flex-direction: column
+        ;
     }
+
     .text{
         text-align: center;
     }
@@ -294,6 +296,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
    .row{
     flex-direction: column;
     text-align: center;
+   }
+   .row.row-cols-md-4{
+    flex-direction: column;
    }
 
 
