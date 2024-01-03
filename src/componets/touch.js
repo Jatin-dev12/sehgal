@@ -23,7 +23,7 @@ function Touch() {
       let data={name,number,email,massage}
       // console.warn(data) 
     
-      fetch ("https://gorest.co.in/public/v2/posts",{
+      fetch("https://gorest.co.in/public/v2/posts",{
         method:"POST",
         headers:{
           'Accept':'application/json',
