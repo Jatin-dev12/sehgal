@@ -22,8 +22,8 @@ function Touch() {
       let api ="https://gorest.co.in/public/v2/posts"
       let data={name,number,email,massage}
       // console.warn(data) 
-      const API_KEY = process.env.REACT_APP_API_KEY
-      fetch("https://gorest.co.in/public/v2/posts",{
+    
+      fetch ("https://gorest.co.in/public/v2/posts",{
         method:"POST",
         headers:{
           'Accept':'application/json',
