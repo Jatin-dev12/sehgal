@@ -19,11 +19,10 @@ function Touch() {
     function saveData()
     {
 
-      let api ="https://gorest.co.in/public/v2/posts"
       let data={name,number,email,massage}
-      // console.warn(data) 
+      
     
-      fetch("https://gorest.co.in/public/v2/posts",{
+      fetch("https://gorest.co.in/public/v2/users?927b9019cb744562be3de1e22cf4259e",{
         method:"POST",
         headers:{
           'Accept':'application/json',

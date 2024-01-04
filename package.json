@@ -21,6 +21,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1",
+    "react-table": "^7.8.0",
     "scroll-carousel": "^1.2.7",
     "sweetalert2": "^11.10.2",
     "web-vitals": "^2.1.4"
