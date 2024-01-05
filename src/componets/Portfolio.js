@@ -28,7 +28,8 @@ return (
        onInput={(e) =>
       setFilters({
         global:{value: e.target.value,matchmode:FilterMatchMode.CONTAINS }
-      }) }/>
+      }) }/><br></br>
+      <br></br>
 
     <DataTable value={data} sortMode='multiple' filters={filters}
     
