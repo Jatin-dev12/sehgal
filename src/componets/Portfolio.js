@@ -1,76 +1,77 @@
-import { useTable, useSortBy } from "react-table";
-import useRows from "./useRow";
-import useColumns from "./useColumns";
+import {  useEffect,useState } from 'react'
+import axios from 'axios';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { FilterMatchMode } from 'primereact/api';
+import { InputText } from 'primereact/inputtext';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+      
+function Portfolio() {
+  const url ='https://buying.com/getStakeAlldata/key/12345';
+  const [data, setData] = useState([]);
 
-function PORTFOLIO () {
-  const columns = useColumns();
-  const data = useRows();
-  const table = useTable({ columns, data }, useSortBy);
+  const fetchInfo = () => {
+    return axios.get('https://buying.com/getStakeAlldata/key/12345')
+    .then((res) => setData(res.data));
+  };
+  const[filters,setFilters]= useState({
+    global:{value:null, matchmode:FilterMatchMode.CONTAINS},
+  })
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow
-  } = table;
+  useEffect(() => {
+    fetchInfo();
+  }, [])
+return (
+  <div>
 
-  return (
-    <div className="container">
-      {/* Apply the table props */}
-      <table {...getTableProps()}>
-        <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                // Aplicamos las propiedades de ordenación a cada columna
-                <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className={
-                    column.isSorted
-                      ? column.isSortedDesc
-                        ? "desc"
-                        : "asc"
-                      : ""
-                  }
-                >
-                  {column.render("Header")}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        {/* Apply the table body props */}
-        <tbody {...getTableBodyProps()}>
-          {
-            // Loop over the table rows
-            rows.map((row) => {
-              // Prepare the row for display
-              prepareRow(row);
-              return (
-                // Apply the row props
-                <tr {...row.getRowProps()}>
-                  {
-                    // Loop over the rows cells
-                    row.cells.map((cell) => {
-                      // Apply the cell props
-                      return (
-                        <td {...cell.getCellProps()}>
-                          {
-                            // Render the cell contents
-                            cell.render("Cell")
-                          }
-                        </td>
-                      );
-                    })
-                  }
-                </tr>
-              );
-            })
-          }
-        </tbody>
-      </table>
-    </div>
-  );
-}
-export default PORTFOLIO ; 
+       <InputText
+       onInput={(e) =>
+      setFilters({
+        global:{value: e.target.value,matchmode:FilterMatchMode.CONTAINS }
+      }) }/>
+
+    <DataTable value={data} sortMode='multiple' filters={filters}
+    
+    >
+      <Column field='id' header='ID' sortable/>
+      <Column field='wallet_address' header='WALLET ADDRESS' sortable />
+       <Column field='staking_date' header='STAKING DATE' sortable />
+      <Column field='staking_expire' header='STAKING EXPIRE'sortable />
+      <Column field='staking_amount' header='STAKING AMOUNT' sortable />     
+      <Column field='highlight_status' header='STATUS' sortable   />
+
+    </DataTable>
+  </div>
+)
+
+};
+export default Portfolio;
+
+
+  // <table>
+  //     <thead>
+  //         <tr>
+  //           <th>Id</th>
+  //           <th> Wallet Address </th>
+  //           <th>Staking Date</th>
+  //           <th>Staking Expire Date</th>
+  //           <th>Amount</th>
+  //           <th>Claim Date</th>
+  //           <th>status</th>
+  //         </tr>
+  //     </thead>
+  //     <tbody>
+  //         {
+  //         data.map(user => (
+  //             <tr key={user.id}>
+  //                   <td>{user.id}</td>
+  //               <td>{user.wallet_address}</td>
+  //               <td>{user.sktaing_date}</td>
+  //               <td>{user.staking_expire}</td>
+  //               <td>{user.staking_amount}</td>
+  //               <td>{user.staking_date}</td>
+  //               <td>{user.highlight_status}</td>
+  //             </tr>
+  //         ))}
+  //     </tbody>
+  // </table>
