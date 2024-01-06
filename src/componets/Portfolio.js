@@ -36,7 +36,7 @@ function Portfolio() {
           
       <input type="text"
       placeholder="Search.." 
-      onChange={event =>  setSearch(event.target.value)} />      
+     />      
 
 
       <DataTable value={data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
