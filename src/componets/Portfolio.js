@@ -6,6 +6,8 @@ import { FilterMatchMode } from 'primereact/api';
 import { InputText } from 'primereact/inputtext';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import { AutoComplete } from 'primereact/autocomplete';
+
+     
 // I Wanna do in status row if value comes 5 then its aaprove .
 // other wise it will be show pendings.s
 
@@ -57,30 +59,4 @@ function Portfolio() {
 export default Portfolio;
 
 
-// <table>
-//     <thead>
-//         <tr>
-//           <th>Id</th>
-//           <th> Wallet Address </th>
-//           <th>Staking Date</th>
-//           <th>Staking Expire Date</th>
-//           <th>Amount</th>
-//           <th>Claim Date</th>
-//           <th>status</th>
-//         </tr>
-//     </thead>
-//     <tbody>
-//         {
-//         data.map(user => (
-//             <tr key={user.id}>
-//                   <td>{user.id}</td>
-//               <td>{user.wallet_address}</td>
-//               <td>{user.sktaing_date}</td>
-//               <td>{user.staking_expire}</td>
-//               <td>{user.staking_amount}</td>
-//               <td>{user.staking_date}</td>
-//               <td>{user.highlight_status}</td>
-//             </tr>
-//         ))}
-//     </tbody>
-// </table>
+
