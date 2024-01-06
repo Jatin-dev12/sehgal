@@ -9,11 +9,15 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 // other wise it will be show pendings.s
 
 function Portfolio() {
-  const [searchTerm,setSearchTerm]=  useState("")
+  const [ setSearch]=  useState("")
   const [data, setData] = useState([]);
+
+
   const fetchInfo = () => {
     return axios.get('https://buying.com/getStakeAlldata/key/12345')
+    
       .then((res) => setData(res.data))
+      
   };
   const [filters, ] = useState({
     global: { value: null, matchmode: FilterMatchMode.CONTAINS },
@@ -32,8 +36,7 @@ function Portfolio() {
           
       <input type="text"
       placeholder="Search.." 
-      onChange={event =>{
-      setSearchTerm(event.target.value)}} />      
+      onChange={event =>  setSearch(event.target.value)} />      
 
 
       <DataTable value={data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
