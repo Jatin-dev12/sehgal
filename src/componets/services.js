@@ -1,11 +1,6 @@
 import React, { useEffect,useState, } from 'react';
 import axios from 'axios'
 
-  //   data = [...data].sort((a, b) => a.name.localeCompare(b.name));
-
-    // data.map((d) => console.log("with localeCompare", d.name, d.email, d.gender,d.status));
-
-    // order an array of names
 function Services() {
 
   const [ data, setData] = useState([])
@@ -18,42 +13,8 @@ useEffect (() => {
    })
 .catch(err => console.log(err )) 
 
-function index(props) {
-  const { index } = props;
-  let sorteduser = [...index];
-  sorteduser.sort((a, b) => {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  });
 
-  const array = ['id', 'Wallet Address', 'Staking Date' ,'status','Claim Date', 'Amount','Staking Expire Date' , 'status'];
-array.sort();
-console.log(array);
-}}
-
-);
-function sortData() {
-  let sortedData;
-  if (sortType === 'descending') {
-    sortedData = [...data].sort((a, b) => {
-      return b.name.localeCompare(a.name);
-    });
-  } else if (sortType === 'ascending') {
-    sortedData = [...data].sort((a, b) => {
-      return a.name.localeCompare(b.name);
-    });
-  } else {
-    return data;
-  }
-  setData(sortedData);
-  const sort = data.sort((a, b) => b.localeCompare(a))
-console.log(sort)
-}
+})
 
   return (
     <div >

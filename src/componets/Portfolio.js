@@ -9,7 +9,6 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 // other wise it will be show pendings.s
 
 function Portfolio() {
-  const [ setSearch]=  useState("")
   const [data, setData] = useState([]);
 
 
@@ -28,15 +27,9 @@ function Portfolio() {
   return (
     <div>
 
-      {/* <InputText
-        onInput={(e) =>
-          setFilters({
-            global: { value: e.target.value, matchmode: FilterMatchMode.CONTAINS }
-          })} /> */}
+      
           
-      <input type="text"
-      placeholder="Search.." 
-     />      
+        s  <input type="text"  placeholder="Search.."   />      
 
 
       <DataTable value={data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
@@ -55,3 +48,8 @@ export default Portfolio;
 
 
 
+/* <InputText
+        onInput={(e) =>
+          setFilters({
+            global: { value: e.target.value, matchmode: FilterMatchMode.CONTAINS }
+          })} /> */
