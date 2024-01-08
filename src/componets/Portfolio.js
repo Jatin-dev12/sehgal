@@ -3,12 +3,13 @@ import axios from 'axios';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { FilterMatchMode } from 'primereact/api';
-import "primereact/resources/themes/lara-light-cyan/theme.css";
-
+ import "primereact/resources/themes/lara-light-cyan/theme.css";
+// import { AutoComplete } from 'primereact/autocomplete';
 // I Wanna do in status row if value comes 5 then its aaprove .
 // other wise it will be show pendings.s
 
 function Portfolio() {
+  
   const [data, setData] = useState([]);
 
 
@@ -24,13 +25,14 @@ function Portfolio() {
   useEffect(() => {
     fetchInfo();
   }, [])
+ 
   return (
-    <div>
-
-      
+    
+    
+<div>
+  
           
-        s  <input type="text"  placeholder="Search.."   />      
-
+         <input type='text' placeholder='Search..'/>
 
       <DataTable value={data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
         <Column field='id' header='ID' sortable />
@@ -38,18 +40,12 @@ function Portfolio() {
         <Column field='staking_date' header='STAKING DATE' sortable />
         <Column field='staking_expire' header='STAKING EXPIRE' sortable />
         <Column field='staking_amount' header='STAKING AMOUNT' sortable />
-        <Column field='highlight_status' header='STATUS' sortable />
+        <Column field='claim_status' header='STATUS'sortable />
       </DataTable>
+      
     </div>
-  )
 
+  )
+  
 };
 export default Portfolio;
-
-
-
-/* <InputText
-        onInput={(e) =>
-          setFilters({
-            global: { value: e.target.value, matchmode: FilterMatchMode.CONTAINS }
-          })} /> */

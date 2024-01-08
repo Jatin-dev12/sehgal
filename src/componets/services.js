@@ -4,7 +4,6 @@ import axios from 'axios'
 function Services() {
 
   const [ data, setData] = useState([])
-  const [sortType, setSortType] = useState('default');
 useEffect (() => {
   axios.get(' https://buying.com/getStakeAlldata/key/12345')
   .then(res => setData(res.data))  
