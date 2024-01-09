@@ -11,8 +11,11 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 function Portfolio() {
   
  const [data, setData] = useState([]);
- const [searchValue, setSearchValue] = useState(null);
+ const [searchValue, ] = useState(null);
  const [suggestions, setSuggestions] = useState([]);
+ const [address, setAddress] = useState([]);
+ const [selecteaddress, setSelectedAddress] = useState(null);
+ const [filteredaddress, setFilteredAddress] = useState(null);
 
  const fetchInfo = () => {
     return axios.get('https://buying.com/getStakeAlldata/key/12345')
@@ -28,7 +31,7 @@ function Portfolio() {
  }, [])
 
  const renderStatus = (rowData) => {
-    console.log('Claim Status:', rowData.claim_status);
+
     return rowData.claim_status === "5" ? <span className='p-text-success'>Approved</span> 
     : <span className='p-text-warning'>Pending</span>;
  };
@@ -36,8 +39,29 @@ function Portfolio() {
  const onSearch = (event) => {
     setTimeout(() => {
         let results = data.filter((row) => row.wallet_address.toLowerCase().startsWith(event.query.toLowerCase()));
-        setSuggestions(results);
-    }, );
+        setSuggestions(results) ;
+         
+      // Timeout to emulate a network connection
+      setTimeout(() => {
+
+         
+          let _filteredaddress;
+
+          if (!event.query.trim().length) {
+              _filteredaddress = [...address];
+          }
+          else {                      
+              _filteredaddress = address.filter((address) => {
+                  return address.name.toLowerCase().startsWith(event.query.toLowerCase());
+              });
+          }
+
+          setFilteredAddress(_filteredaddress);
+      }, 250);
+      
+  
+        
+    }, );  
 }
 
 return (
@@ -45,10 +69,10 @@ return (
     
  <div>
     
-          <AutoComplete value={searchValue} suggestions={suggestions}
-           completeMethod={onSearch} field='wallet_address' multiple={true} />
+          <AutoComplete value={searchValue} suggestions={suggestions} multiple={true}
+           completeMethod={onSearch} field='wallet_address'   />
 
-      <DataTable value={data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
+      <DataTable value={data}  sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
         <Column field='id' header='ID' sortable />
         <Column field='wallet_address' header='WALLET ADDRESS' sortable />
         <Column field='staking_date' header='STAKING DATE' sortable />
@@ -63,3 +87,5 @@ return (
   
 };
 export default Portfolio;
+
+
