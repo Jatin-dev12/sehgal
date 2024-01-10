@@ -48,10 +48,6 @@ function Touch() {
       }
     };
   
-    if (loading) {
-      return <p>Loading data...</p>;
-    }
-  
     if (error) {
       if (error === 'The requested resource could not be found.') {
         return <p>{error}</p>;

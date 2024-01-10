@@ -91,7 +91,7 @@ function About () {
         <tbody>
           {filteredData.map((item, index) => (
             <tr key={index}>
-              <td>{item.id}</td>
+              <td>{index+1}</td>
               <td>{item.wallet_address}</td>
               <td>{item.staking_date}</td>
               <td>{item.staking_expire}</td>
