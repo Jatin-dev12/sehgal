@@ -1,146 +1,98 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react'
+import Table from 'react-bootstrap/Table';
 import axios from 'axios';
-import { AutoComplete } from 'primereact/autocomplete';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { FilterMatchMode } from 'primereact/api';
 
-function Portfolio() {
-    const [data, setData] = useState([]);
-    const [searchValue, setSearchValue] = useState(null);
-    const [suggestions, setSuggestions] = useState([]);
-    const [selectedAddress, setSelectedAddress] = useState(null);
-    const [filters, ] = useState({
-        global: { value: null, matchmode: FilterMatchMode.CONTAINS },
-    })
+function About () {
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
+  const [sortColumn, setSortColumn] = useState('wallet_address');
+  const [sortDirection, setSortDirection] = useState('asc');
 
-    useEffect(() => {
-        fetchInfo();
-    }, [])
 
-    const fetchInfo = () => {
-        return axios.get('https://buying.com/getStakeAlldata/key/12345')
-            .then((res) => setData(res.data))
+  const handleSearchChange = useCallback((e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setSearch(searchTerm);
+
+    if (searchTerm.length > 0) {
+      setFilteredData(data.filter((item) => item.wallet_address.toLowerCase().startsWith(searchTerm)));
+    } else {
+      setFilteredData(data);
     }
+  }, [data]);
 
-    const renderStatus = (rowData) => {
-        return rowData.claim_status === "5" ? <span className='p-text-success'>Approved</span>
-            : <span className='p-text-warning'>Pending</span>;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://buying.com/getStakeAlldata/key/12345');
+        setData(response.data);
+        setFilteredData(response.data);
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const renderClaimStatus = (status) => {
+    if (status === '5') {
+      return <span className='text-success'>Approved</span>;
+    } else {
+      return <span className='text-danger'>Pending</span>;
     }
+  };
 
-    const onSearch = (event) => {
-        setTimeout(() => {
-            let results = data.filter((row) => row.wallet_address.toLowerCase().startsWith(event.query.toLowerCase()));
-            setSuggestions(results);
-        }, 250);
-    }
+  const sortData = (column) => {
+    const direction = column === sortColumn && sortDirection === 'asc' ? 'desc' : 'asc';
+    const sortedData = [...data].sort((a, b) => {
+      if (a[column] < b[column]) {
+        return direction === 'asc' ? -1 : 1;
+      }
+      if (a[column] > b[column]) {
+        return direction === 'asc' ? 1 : -1;
+      }
+      return 0;
+    });
+    setSortColumn(column);
+    setSortDirection(direction);
+    setFilteredData(sortedData);
+  };
 
-    return (
-        <div>
-            <AutoComplete value={searchValue} suggestions={suggestions} multiple={true}
-                completeMethod={onSearch} field='wallet_address'
-                onChange={(e) => {
-                    setSelectedAddress(e.value);
-                    console.log('Selected Wallet Address:', e.value);
-                }} />
-
-            <DataTable value={selectedAddress ? data.filter(row => row.wallet_address === selectedAddress) : data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
-                <Column field='id' header='ID' sortable />
-                <Column field='wallet_address' header='WALLET ADDRESS' filter />
-                <Column field='staking_date' header='STAKING DATE' sortable />
-                <Column field='staking_expire' header='STAKING EXPIRE' sortable />
-                <Column field='staking_amount' header='STAKING AMOUNT' sortable />
-                <Column field='claim_status' header='STATUS' body={renderStatus} sortable />
-            </DataTable>
-        </div>
-    )
+  return (
+    <div>
+      <input
+        type='text'
+        placeholder='Search by wallet address'
+        value={search}
+        onChange={handleSearchChange}
+      />
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th onClick={() => sortData('id')}>ID</th>
+            <th onClick={() => sortData('wallet_address')}>ADDRESS</th>
+            <th onClick={() => sortData('staking_date')}>DATE</th>
+            <th onClick={() => sortData('staking_expire')}>EXPIRE</th>
+            <th onClick={() => sortData('staking_amount')}>AMOUNT</th>
+            <th onClick={() => sortData('claim_status')}>STATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredData.map((item, index) => (
+            <tr key={index}>
+              <td>{item.id}</td>
+              <td>{item.wallet_address}</td>
+              <td>{item.staking_date}</td>
+              <td>{item.staking_expire}</td>
+              <td>{item.staking_amount}</td>
+              <td>{renderClaimStatus(item.claim_status)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
+  );
 }
 
-export default Portfolio;
-
-
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import { AutoComplete } from 'primereact/autocomplete';
-// import { DataTable } from 'primereact/datatable';
-// import { Column } from 'primereact/column';
-// import { FilterMatchMode } from 'primereact/api';
-
-// function About () {
-//     const [data, setData] = useState([]);
-//     const [searchValue, setSearchValue] = useState(null);
-//     const [suggestions, setSuggestions] = useState([]);
-//     const [address, setAddress] = useState([]);
-//     const [filteredaddress, setFilteredAddress] = useState(null);
-//     const [selectedAddress, setSelectedAddress] = useState(null);
-//     const [filters, ] = useState({
-//         global: { value: null, matchmode: FilterMatchMode.CONTAINS },
-//     })
-
-//     useEffect(() => {
-//         fetchInfo();
-//     }, [])
-
-//     const fetchInfo = () => {
-//         return axios.get('https://buying.com/getStakeAlldata/key/12345')
-//             .then((res) => setData(res.data))
-//     }
-
-//     const renderStatus = (rowData) => {
-//         return rowData.claim_status === "5" ? <span className='p-text-success'>Approved</span>
-//             : <span className='p-text-warning'>Pending</span>;
-//     }
-
-//     const onSearch = (event) => {
-//       setTimeout(() => {
-//         let results = data.filter((row) => row.wallet_address.toLowerCase().startsWith(event.query.toLowerCase()));
-//         setSuggestions(results) ;
-         
-//       // Timeout to emulate a network connection
-//       setTimeout(() => {
-
-         
-//           let _filteredaddress;
-
-//           if (!event.query.trim().length) {
-//               _filteredaddress = [...address];
-//           }
-//           else {                      
-//               _filteredaddress = address.filter((address) => {
-//                   return address.name.toLowerCase().startsWith(event.query.toLowerCase());
-//               });
-//           }
-
-//           setFilteredAddress(_filteredaddress);
-//       }, 250);
-      
-  
-        
-//     }, );  
-// }
-    
-
-//     return (
-//         <div>
-//             <AutoComplete value={searchValue} suggestions={suggestions} multiple={true}
-//                 completeMethod={onSearch} field='wallet_address'
-//                 onChange={(e) => {
-//                   setSelectedAddress(e.value);
-//                   console.log('Selected Wallet Address:', e.value);
-//                   }} />
-
-//             <DataTable value={data} sortMode='multiple' filters={filters} tableStyle={{ minWidth: '50rem' }}>
-//             <Column field='id' header='ID' sortable />
-//         <Column field='wallet_address' header='WALLET ADDRESS' sortable />
-//         <Column field='staking_date' header='STAKING DATE' sortable />
-//         <Column field='staking_expire' header='STAKING EXPIRE' sortable />
-//         <Column field='staking_amount' header='STAKING AMOUNT' sortable />
-//         <Column field='claim_status' header='STATUS' body={renderStatus} sortable />
-//             </DataTable>
-//         </div>
-//     )
-// }
-
-
-// export default About ;
-
+export default About;

@@ -29,7 +29,7 @@ function Services() {
     if (status === '5') {
       return <span className='text-success'>Approved</span>;
     } else if (status === '1') {
-      return <span className='text-warning'>Pending</span>;
+      return <span className='text-danger'>Pending</span>;
     } else {
       return <span className='text-danger'>Pending</span>;
     }
@@ -66,21 +66,31 @@ function Services() {
       return String(columnB).localeCompare(String(columnA));
     }
   });
-
-  const handleSearchChange = (event) => {
-    const searchTerm = event.target.value.toLowerCase();
+  const handleSearchChange = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
     setSearch(searchTerm);
 
-    if (searchTerm === '') {
-      setFilteredData(sortedData);
+    if (searchTerm.length > 0) {
+      setFilteredData(data.filter((item) => item.wallet_address.toLowerCase().startsWith(searchTerm)));
     } else {
-      setFilteredData(
-        sortedData.filter((item) =>
-          item.wallet_address.toLowerCase().startsWith(searchTerm)
-        )
-      );
+      setFilteredData(data);
     }
   };
+
+  // const handleSearchChange = (event) => {
+  //   const searchTerm = event.target.value.toLowerCase();
+  //   setSearch(searchTerm);
+
+  //   if (searchTerm === '') {
+  //     setFilteredData(sortedData);
+  //   } else {
+  //     setFilteredData(
+  //       sortedData.filter((item) =>
+  //         item.wallet_address.toLowerCase(). includes (searchTerm)
+  //       )
+  //     );
+  //   }
+  // };
 
   return (
     <div>
@@ -98,12 +108,13 @@ function Services() {
         <Table striped bordered hover>
           <thead>
             <tr>
+            
               <th onClick={() => handleSort('id')}>ID</th>
               <th onClick={() => handleSort('wallet_address')}>ADDRESS</th>
               <th onClick={() => handleSort('staking_date')}>DATE</th>
               <th onClick={() => handleSort('staking_expire')}>EXPIRE</th>
-              <th onClick={() => handleSort('staking_amount')}>Paisa</th>
-              <th>STATUS</th>
+              <th onClick={() => handleSort('staking_amount')}>AMOUNT</th>
+              <th onClick={() => handleSort('claim_status')}>STATUS</th>
             </tr>
           </thead>
           <tbody>
@@ -113,10 +124,10 @@ function Services() {
                             ? item
                             : item.wallet_address.toLowerCase().includes(search);
                         })
-                        .map((item, index) => (
-                          <tr key={index}>
+                        .map((item, index ,  accessor) => (
+                          <tr key={index} onClick={() => handleSort( accessor)}>
                             <td>{item.id}</td>
-                            <td>{item.wallet_address}</td>
+                            <td>{item.wallet_address.substring(0, 6)}...{item.wallet_address.substring(item.wallet_address.length - 4)}</td>
                             <td>{item.staking_date}</td>
                             <td>{item.staking_expire}</td>
                             <td>{item.staking_amount}</td>
