@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
+import { FaSort, FaSortUp , FaSortDown } from 'react-icons/fa';
+import './Api.css'
 
 function About () {
   const [data, setData] = useState([]);
@@ -59,23 +61,31 @@ function About () {
     setFilteredData(sortedData);
   };
 
+  const getSortIcon = (column) => {
+    if (column === sortColumn) {
+      return sortDirection === 'asc' ? <FaSortUp /> : <FaSortDown />;
+    } else {
+      return <FaSort />;
+    }
+  };
+
   return (
     <div>
-      <input
+      <input className='api'
         type='text'
-        placeholder='Search by wallet address'
+        placeholder=' Search wallet address '
         value={search}
         onChange={handleSearchChange}
       />
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th onClick={() => sortData('id')}>ID</th>
-            <th onClick={() => sortData('wallet_address')}>ADDRESS</th>
-            <th onClick={() => sortData('staking_date')}>DATE</th>
-            <th onClick={() => sortData('staking_expire')}>EXPIRE</th>
-            <th onClick={() => sortData('staking_amount')}>AMOUNT</th>
-            <th onClick={() => sortData('claim_status')}>STATUS</th>
+            <th onClick={() => sortData('id')}>ID {getSortIcon('id')}</th>
+            <th onClick={() => sortData('wallet_address')}>ADDRESS {getSortIcon('wallet_address')}</th>
+            <th onClick={() => sortData('staking_date')}>DATE {getSortIcon('staking_date')}</th>
+            <th onClick={() => sortData('staking_expire')}>EXPIRE {getSortIcon('staking_expire')}</th>
+            <th onClick={() => sortData('staking_amount')}>AMOUNT {getSortIcon('staking_amount')}</th>
+            <th onClick={() => sortData('claim_status')}>STATUS {getSortIcon('claim_status')}</th>
           </tr>
         </thead>
         <tbody>
@@ -86,13 +96,12 @@ function About () {
               <td>{item.staking_date}</td>
               <td>{item.staking_expire}</td>
               <td>{item.staking_amount}</td>
-              <td>{renderClaimStatus(item.claim_status)}</td>
-            </tr>
-          ))}
+             <td>{renderClaimStatus(item.claim_status)}</td>            
+              </tr>        
+                ))}
         </tbody>
-      </Table>
-    </div>
-  );
-}
-
+       </Table>
+     </div>   
+     );
+     }
 export default About;
