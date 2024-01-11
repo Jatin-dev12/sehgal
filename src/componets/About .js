@@ -48,14 +48,31 @@ function About () {
   const sortData = (column) => {
     const direction = column === sortColumn && sortDirection === 'asc' ? 'desc' : 'asc';
     const sortedData = [...data].sort((a, b) => {
+      if (column === 'staking_amount') {
+        const aAmount = parseFloat(a[column]);
+        const bAmount = parseFloat(b[column]);
+  
+        if (isNaN(aAmount) || isNaN(bAmount)) {
+          return 0;
+        } 
+        if (aAmount < bAmount) {
+          return direction === 'asc' ? -1 : 1;
+        }
+        if (aAmount > bAmount) {
+          return direction === 'asc' ? 1 : -1;
+        }
+        return 0;
+      }else{       
       if (a[column] < b[column]) {
         return direction === 'asc' ? -1 : 1;
       }
-      if (a[column] > b[column]) {
-        return direction === 'asc' ? 1 : -1;
-      }
+        if (a[column] > b[column]) {
+          return direction === 'asc' ? 1 : -1;
+        }
       return 0;
+       }
     });
+    
     setSortColumn(column);
     setSortDirection(direction);
     setFilteredData(sortedData);
