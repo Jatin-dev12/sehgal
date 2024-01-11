@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
 import './Api.css'
+import "@fontsource/poppins"
 
 function Services() {
   const [data, setData] = useState([]);
