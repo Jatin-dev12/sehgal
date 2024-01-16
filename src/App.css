@@ -1,0 +1,322 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+a.navbar-brand {
+    margin-left: 0;
+}
+.navbar{
+    margin: 10;
+   text-transform: uppercase;
+    font-weight: 500;
+    justify-content: space-between;
+    align-content: space-between;
+} 
+
+.joker{
+    margin-right: 555px;
+    font-weight: 900;
+    font-size: xx-large;    
+    align-items: center;
+    text-align: left;
+    color: black;
+    line-height: 1.5;
+
+}
+.hehe{
+    font-size: larger;
+    font-weight:400;
+    text-align: left;
+    color: black;
+    margin-right: 350px;
+
+}
+.carousel-caption {
+    top: 10rem;
+    
+}
+.carousel-control-prev{
+    display: none;
+    visibility: hidden;
+    
+}
+.d.row{
+    width: 100%;
+}
+
+.lets{
+      float:left;
+      height: 50px;
+      margin-top: 5px;
+    }
+
+.text{
+     text-align: center;
+}
+.row-cols-md-4>* {
+    
+    padding: 51px;
+}
+
+.row.row-cols-md-4 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.ho{
+    font-weight: 700;
+    text-align: center;
+    top: 20px;
+}
+.par{
+    font-weight: 500;
+    margin: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+}
+.text-center{
+    padding-bottom: 50px;
+}
+.ooo{
+    text-align: center;
+    font-weight: 500;
+}
+.hhh{
+    padding-top: 60px;
+
+}
+.iii{
+    width: 100%;
+}
+.g{
+    padding-bottom: 10px;
+}
+.jn{
+    font-weight: 500;
+    text-align: center;
+    padding-top: 55px;
+}
+.work{
+
+    padding-bottom: 30px;
+}
+.sa{
+    text-align: center;
+}
+ .do{
+   margin-top: 50px;
+}
+.nini{
+    text-align: center;
+    font-weight:600;
+    padding-top: 80px;
+    
+}
+.sleep{
+    text-align: center;
+    font-weight: 400;
+    padding: 10px;
+}
+.roo{
+ text-align: center;
+}
+.realme{
+    justify-content: right;
+    margin-left: 75px;
+    padding: 5px;
+    padding-bottom: 10px;
+
+}
+.our{
+    font-weight: 500;
+    text-align: center;
+}
+.show{
+ width: auto;
+ margin-left: 520px;
+ bottom: 50px;
+ margin-top: 20px;
+ margin-bottom: 40px;
+
+
+}
+.icons {
+    padding-top: 40px;
+    vertical-align: middle;
+    width: 100%;
+}
+.footer{
+    margin: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    align-content: center;
+    font-weight: 800;
+
+}
+
+.navbar-expand .navbar-nav{
+    text-align: center;
+    font-weight: 700;
+    
+} 
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center ;
+}
+.dabba{
+    padding-left: 20px;
+    padding-right: 35px;
+}
+.dabba img{
+    display: block;
+    width: 100%;
+    justify-content: right;
+}
+.aws{
+    text-align: left;
+    margin-top: 20px;
+}
+.last{
+    padding-top: 60px;
+    font-size: smaller;
+    text-align: center;
+    justify-content: center;
+    top: 50px;
+}
+.boring{
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+.carousel-indicators{
+    display: none;
+}
+@media(max-width: 786px){
+
+       .sa{
+        font-weight: 500;
+    }
+    .button.btn.btn-primary.btn-lg{
+        display: none;
+    }
+
+    .par{ 
+        margin: 20px;
+        padding: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+    .work.col img {
+        width: 100%;
+    }
+    .carousel {
+        position: relative;
+        display: none;
+    }
+    img.iii {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .mb-3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        padding: 20px;
+    }
+    .row.row-cols-md-true {
+        display: block;
+    }
+    .sa{
+        padding: 10px;
+    }
+    .re{
+        padding: 10px;
+    }
+
+    .do{
+        margin: auto;
+        text-align: center;
+        font-weight: 500;
+    }
+    .pp.row{
+        display: flex;
+    }
+    .row-cols-md-4>* {
+    
+        padding: 1px;
+    }
+    .boring img {
+        width: 100%;
+    }
+    .work{
+        display: flex;
+    }
+    .joker{
+        margin-right: auto;
+    }
+    img.realme.rounded-circle{
+        width: 100%;
+        margin: auto;
+    }
+    .navbar-expand .navbar-nav{
+        flex-direction: column
+        ;
+    }
+
+    .text{
+        text-align: center;
+    }
+    .show{
+        margin-left: 30%;
+    }
+    .d{
+        display: contents;
+    }
+    .ccc{
+        display: contents;
+    }
+   .d{
+    display: contents;
+   }
+
+   .form{
+    display:contents;
+   }
+   button.btn.btn-primary.btn-lg {
+    display: none;
+   }
+
+   .row{
+    flex-direction: column;
+    text-align: center;
+   }
+   .row.row-cols-md-4{
+    flex-direction: column;
+   }
+
+
+}
+.cf{
+    font-weight: 500;
+    margin: 50px;
+    padding-top: 20px;
+    
+}
+.cff{
+    width: 100%;
+}
+.row{
+    width: 100%;
+}
+.sssss{
+    text-align: center;
+}
+.sorting{
+    text-align: center;
+}
