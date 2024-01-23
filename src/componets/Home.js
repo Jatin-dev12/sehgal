@@ -29,11 +29,8 @@ import top from './images/top.png'
 import cf from './images/cf.jpg'
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
-// import html from './images/html.png';
-// import css from './images/css.png';
-// import php from './images/php.png';
-// import react from './images/react.png';
-// import seo from './images/seo.png';
+
+
 function Home() {
 
   const [data, setData] = useState([]);
@@ -220,10 +217,7 @@ Our approach is designed to provide you with a systematic and organized process.
         </Col></Row>
           
         
-           {/* <Col> <Image src={ggl} alt='vbfd'/>
-           <Image src={trst} alt='vbfd'/>
-           <Image src={top} alt='vbfd'/>
-           </Col> */}
+         
           </Col>
           
           <Col xs className='sssss'> 
